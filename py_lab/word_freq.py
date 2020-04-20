@@ -16,11 +16,12 @@ dic = {}
 for i in ary:
 	count=0
 	for k in ary:
-		if i==k:
+		if i.lower()==k.lower():
 			count+=1
-	dic[i]=count
+	dic[i.lower()]=count
 wordlist=sorted(dic.items(),reverse=True,key=lambda item: item[1])
 for key, value  in wordlist:
 	temp+=1
 	if temp<=num:
-		print(key," ",value)
+		left='{:<30}'.format(key)
+		print(left,value)
