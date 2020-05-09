@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="en">
+
+<head>
+	<meta charset="UTF_8">
+	<title>Fibo</title>
+	<script>
+	var fibonacci = function(){
+	
+	var a=document.getElementsByTagName("input")[0].value;
+	var b=parseInt(a);
+	let k=1;
+	let x=0;
+	let y=1;
+	let re=[];
+
+	re.push(y);
+
+	while(k<b){
+		let temp=y+x;
+		re.push(temp);
+		x=y;
+		y=temp;
+		k++;
+	}
+
+	document.getElementsByTagName("input")[1].value=re.toString();
+}
+
+	</script>
+</head>
+
+<body>
+	Input :
+	<input type = "text"/>
+	<button onclick = "fibonacci()">
+	click
+	</button>
+	<br>
+	Result :
+	<input type = "text"/>
+	<br>
+</body>
+</html>
